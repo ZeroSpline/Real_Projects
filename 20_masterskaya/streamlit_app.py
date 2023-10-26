@@ -17,6 +17,7 @@ pkl_path_model = Path(__file__).parents[1] / '20_masterskaya/log_reg.pkl'
 
 nltk.download('stopwords')
 nltk.download('punkt')
+nltk.download('wordnet')
 stop_words = stopwords.words('english')
 stop_words.remove('not')
 lemmatizer = WordNetLemmatizer()
