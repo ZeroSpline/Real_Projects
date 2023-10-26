@@ -4,5 +4,3 @@ pysrt
 seaborn
 matplotlib
 nltk
-scikit-learn
-pickle
