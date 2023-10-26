@@ -1,1 +1,9 @@
-opencv-python
+streamlit
+pickle
+pandas
+pysrt
+re
+os
+nltk
+seaborn
+matplotlib.pyplot
