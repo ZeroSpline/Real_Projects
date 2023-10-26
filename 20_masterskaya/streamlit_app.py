@@ -108,10 +108,11 @@ if predict_button:
         Y = subs_vectorize(X)
         X = subs_stats(X)
         Z = subs_union(Y, X)
-
+        Z.columns = Z.columns.astype(str)
+        
         predictions = pd.DataFrame({'Вероятность': LOG_REG.predict_proba(Z)[0],
                                     'Уровень английского языка': ['A2', 'B1', 'B2', 'C1']})
-        predictions.columns = predictions.columns.astype(str)
+
         
         msg = 'Вероятно, что ' + predictions.loc[predictions['Вероятность'].idxmax(), 'Уровень английского языка'] + \
               '- уровень подойдет для просмотра этой киноленты!'
