@@ -111,7 +111,8 @@ if predict_button:
 
         predictions = pd.DataFrame({'Вероятность': LOG_REG.predict_proba(Z)[0],
                                     'Уровень английского языка': ['A2', 'B1', 'B2', 'C1']})
-
+        predictions.columns = predictions.columns.astype(str)
+        
         msg = 'Вероятно, что ' + predictions.loc[predictions['Вероятность'].idxmax(), 'Уровень английского языка'] + \
               '- уровень подойдет для просмотра этой киноленты!'
         st.header(msg)
