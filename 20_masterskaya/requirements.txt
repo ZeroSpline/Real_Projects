@@ -4,3 +4,4 @@ pysrt
 seaborn
 matplotlib
 nltk
+sklearn
