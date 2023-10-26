@@ -10,6 +10,10 @@ from nltk.stem import WordNetLemmatizer
 from nltk.tokenize import word_tokenize
 import seaborn as sns
 import matplotlib.pyplot as plt
+from pathlib import Path
+
+pkl_path_vect = Path(__file__).parents[1] / '20_masterskaya/vect_model.pkl'
+pkl_path_model = Path(__file__).parents[1] / '20_masterskaya/log_reg.pkl'
 
 nltk.download('stopwords')
 stop_words = stopwords.words('english')
@@ -19,9 +23,8 @@ lemmatizer = WordNetLemmatizer()
 HTML = "<.*?>"
 TAG = "{.*?}"
 LETTERS = "[^a-zA-Z\'.,!? ]"
-# VECTORIZER = pickle.load(open('vect_model.pkl', 'rb'))
-VECTORIZER = pickle.load(open('https://github.com/ZeroSpline/Real_Projects/blob/main/20_masterskaya/vect_model.pkl', 'rb'))
-LOG_REG = pickle.load(open('log_reg.pkl', 'rb'))
+VECTORIZER = pickle.load(open(pkl_path_vect', 'rb'))
+LOG_REG = pickle.load(open(pkl_path_model, 'rb'))
 
 def subs_clean_and_tokenize(subs):
     revi = re.sub(re.compile('<.*?>'), '', subs) # убираем html тэги
