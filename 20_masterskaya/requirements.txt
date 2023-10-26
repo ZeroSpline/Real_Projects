@@ -4,4 +4,4 @@ pysrt
 seaborn
 matplotlib
 nltk
-sklearn
+scikit-learn
