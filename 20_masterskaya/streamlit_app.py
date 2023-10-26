@@ -126,9 +126,3 @@ if predict_button:
         
     except NameError:
         st.text('Пожалуйста, сначала загрузите файл субтитров.')
-
-       
-
-
-
-
