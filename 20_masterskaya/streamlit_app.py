@@ -19,7 +19,8 @@ lemmatizer = WordNetLemmatizer()
 HTML = "<.*?>"
 TAG = "{.*?}"
 LETTERS = "[^a-zA-Z\'.,!? ]"
-VECTORIZER = pickle.load(open('vect_model.pkl', 'rb'))
+# VECTORIZER = pickle.load(open('vect_model.pkl', 'rb'))
+VECTORIZER = pickle.load(open('https://github.com/ZeroSpline/Real_Projects/blob/main/20_masterskaya/vect_model.pkl', 'rb'))
 LOG_REG = pickle.load(open('log_reg.pkl', 'rb'))
 
 def subs_clean_and_tokenize(subs):
