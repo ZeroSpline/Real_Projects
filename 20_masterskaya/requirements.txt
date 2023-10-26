@@ -1,9 +1,6 @@
-streamlit
-pickle
 pandas
+streamlit
 pysrt
-re
-os
-nltk
 seaborn
-matplotlib.pyplot
+matplotlib
+nltk

@@ -11,6 +11,7 @@ from nltk.tokenize import word_tokenize
 import seaborn as sns
 import matplotlib.pyplot as plt
 
+nltk.download('stopwords')
 stop_words = stopwords.words('english')
 stop_words.remove('not')
 lemmatizer = WordNetLemmatizer()
