@@ -23,7 +23,7 @@ lemmatizer = WordNetLemmatizer()
 HTML = "<.*?>"
 TAG = "{.*?}"
 LETTERS = "[^a-zA-Z\'.,!? ]"
-VECTORIZER = pickle.load(open(pkl_path_vect', 'rb'))
+VECTORIZER = pickle.load(open(pkl_path_vect, 'rb'))
 LOG_REG = pickle.load(open(pkl_path_model, 'rb'))
 
 def subs_clean_and_tokenize(subs):
